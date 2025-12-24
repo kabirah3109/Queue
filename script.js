@@ -60,6 +60,10 @@
             }
 
             clearAll() {
+                if (this.queue.length === 0) {
+                    alert('Queue is already empty.');
+                    return;
+                }
                 if (confirm('Are you sure you want to clear all tasks?')) {
                     this.queue = [];
                     this.updateUI();
